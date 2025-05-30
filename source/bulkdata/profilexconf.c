@@ -342,6 +342,7 @@ static void* CollectAndReportXconf(void* data)
                 else
                 {
                     T2Debug("Abort upload is not yet set.\n");
+		    T2Debug("T2 HTTP URL is %s \n", profile->t2HTTPDest->URL);
                     ret = sendReportOverHTTP(profile->t2HTTPDest->URL, jsonReport, &xconfReportPid);
                 }
 
